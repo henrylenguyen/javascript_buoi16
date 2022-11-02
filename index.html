@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link />
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <!-- STYLE CSS -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<main>
+  <div class="container">
+    <div class="navigation">
+      <div class="d-flex navigation__list">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-number1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number1" type="button" role="tab" aria-controls="v-pills-number1" aria-selected="true">Bài 1</button>
+          <button class="nav-link" id="v-pills-number2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number2" type="button" role="tab" aria-controls="v-pills-number2" aria-selected="false">Bài 2</button>
+          <button class="nav-link" id="v-pills-number3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number3" type="button" role="tab" aria-controls="v-pills-number3" aria-selected="false">Bài 3</button>
+          <button class="nav-link" id="v-pills-number4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number4" type="button" role="tab" aria-controls="v-pills-number4" aria-selected="false">Bài 4</button>
+          <button class="nav-link" id="v-pills-number5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number5" type="button" role="tab" aria-controls="v-pills-number5" aria-selected="false">Bài 5</button>
+          <button class="nav-link" id="v-pills-number6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number6" type="button" role="tab" aria-controls="v-pills-number6" aria-selected="false">Bài 6</button>
+          <button class="nav-link" id="v-pills-number7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-number7" type="button" role="tab" aria-controls="v-pills-number7" aria-selected="false">Bài 7</button>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-number1" role="tabpanel" aria-labelledby="v-pills-number1-tab" tabindex="0">
+            <div class="tab__item">
+              <h2>Tìm số chẵn/lẻ nhỏ hơn 100</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>Input mặc định là 100</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Công thức: 
+                      <ul>
+                      Cho vòng lặp chạy từ 0 đến 100
+                        <li>Chia thành 2 biến để lưu trữ số chẵn và số lẽ, mỗi lần chạy sẽ được nối chuỗi bằng phép cộng, vd: Even += i</li>
+                        <li>Số lẽ là số chia hết cho 2, số chẵn là số chia hết cho 2 dư 1</li>
+                      </ul>
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả tương ứng</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                <div class="result">
+                  <button class="result__button"  onclick="resultCount()">Kết quả</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label id="text">Kết quả là:</label>
+                <div class="result__text" id="resultCount"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number2" role="tabpanel" aria-labelledby="v-pills-number2-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tính giá trị trung bình</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>Đếm số chia hết cho 3</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Công thức: 
+                      <ul>
+                        <li>Những số chia 3 dư 0</li>
+                        <li>Dùng vòng lặp để lặp tới số mà người dùng nhập</li>
+                        <li>Mỗi lần lặp qua số chia hết cho 3 thì cộng đếm lên 1</li>
+                      </ul>
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả của phép đếm</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                <div class="row input__group ">
+                  <input class="col input number" type="number" id="number1" placeholder="Nhập số nguyên" min="1">
+                  
+                </div>
+                <div class="result">
+                  <button class="result__button" onclick="resultDivide()">Đếm số chia hết cho 3</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <div class="result__text" id="resultDivide"></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number3" role="tabpanel" aria-labelledby="v-pills-number3-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tìm số nguyên dương nhỏ nhất</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>Điều kiện dừng vòng lặp là sum > 10000</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Mỗi lần lặp là sẽ cộng dồn biến sum, nếu mà lớn hơn 10000 sẽ dừng. Khi đó dừng ngay tại chỗ nào thì chỗ đó là số nguyên dương nhỏ nhất. (là số lần lặp được trong vòng lặp)</p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả tìm ra số nguyên dương nhỏ nhất</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+              
+                <div class="result">
+                  <button class="result__button" onclick="resultIntMin();">Tìm kiếm</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <input type="text" id="resultIntMin" disabled>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number4" role="tabpanel" aria-labelledby="v-pills-number4-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tính tổng S(n) = x + x <sup>2</sup> + x <sup>3</sup> + … + x <sup>n</sup> </h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>n là số (điều kiện dừng của vòng lặp), X là cơ số</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>
+                    <ul>
+                      <li>Khai báo biến n là số mũ</li>
+                      <li>Mỗi lần lặp là số n sẽ tăng lên 1</li>
+                      <li>Biến sum là biến cộng dồn giá trị</li>
+                    </ul>
+                    </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả phép tính</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                 <div class="row input__group ">
+                   <input class="col mx-2 input IndexNumber" type="number" placeholder="Nhập Cơ Số" min="1">
+                   <input class="col mx-2 input IndexNumber" type="number" placeholder="Nhập Số Mũ" min="1">
+                </div>
+                <div class="result">
+                  <button class="result__button" onclick="resultIndexNumber();">Tính tổng</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <input type="text" id="resultIndexNumber" disabled>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number5" role="tabpanel" aria-labelledby="v-pills-number5-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tính giai thừa 1! 2!.....n!</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>Nhập vào n là số giai thừa cần tính</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Công thức:
+                      <ul>
+                        <li> B1: Giai thừa là tích của 1*...*n (n là số giai thừa mình nhập)
+                        </li>
+                        <li> Ví dụ: 6! = 1*2*3*4*5*6 = 720 </li>
+                        <li>  B2: n là điều kiện dừng, i bé hơn hoặc bằng n</li>
+                        <li>  B3: Biến multip là biến lưu trữ tích của n sau mỗi lần lặp</li>
+                      </ul> 
+                       </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả của giai thừa tương ứng</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                <div class="row input__group ">
+                  <input class="col input factorial" type="number" placeholder="Nhập số cần tính giai thừa" min="1">
+                </div>
+                <div class="result">
+                  <button class="result__button" onclick="Resultfactorial()">Tính giai thừa</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <div class="result__text" id="Resultfactorial"></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number6" role="tabpanel" aria-labelledby="v-pills-number6-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tạo thẻ div</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>Tạo 10 thẻ div. Thẻ lẽ màu xanh, thẻ chẵn màu đỏ</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Công thức:
+                      <ul>
+                        <li> B1: Tạo 1 thẻ cha div chứa các thẻ con từ JavaScript.
+                        </li>
+                        <li> B2: Dùng thuộc tính nth-child(even) và nth-child(odd) để css màu cho các thẻ chẵn và lẽ </li>
+                        <li>  B3: Tạo 1 biến content để lưu trữ thẻ div chẵn lẽ bên JavaScript</li>
+                        <li>  B4: Cho điều kiện chạy từ 1->10, nếu chia hết cho 2 là div chẵn và có màu xanh ngược lại màu đỏ</li>
+                        <li>  B5: Lưu kết quả vào biến content và xuất ra màn hình</li>
+                      </ul> 
+                       </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả 10 thẻ div được tạo</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                <div class="result">
+                  <button class="result__button" onclick="ResultDiv()">Tạo</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <div class="result__text" id="ResultDiv">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-number7" role="tabpanel" aria-labelledby="v-pills-number7-tab" tabindex="0">
+             <div class="tab__item">
+              <h2>Tìm số nguyên tố</h2>
+              <div class="tab__text">
+                <ul>
+                  <li>
+                    <h4>Input:</h4>
+                    <p>n là số người dùng nhập</p>
+                  </li>
+                  <li>
+                    <h4>Process:</h4>
+                    <p>Công thức:
+                      <ul>
+                        <li> B1: Số nguyên tố là số phải lớn hơn 1 và chỉ có một ước là 1 và chính nó.
+                        </li>
+                        <li> B2: Đếm số ước của x trong đoạn từ 2 đến căn bậc hai của x. Nếu số đó không có ước nào trong đoạn từ 2 đến căn bậc hai của x thì nó là số nguyên tố. Ngược lại thì không phải.</li>
+                        <li>  B3: số nguyên >= 2 bất kỳ sẽ luôn có số ước ở nửa đầu căn bậc 2 của nó bằng số ước ở nửa sau căn bậc 2 của nó. Cụ thể, các ước sẽ phân bố thành 2 miền từ [2; sqrt(x)] và từ [sqrt(x); x].</li>
+                        <li>  =>Khi kiểm tra điều kiền lặp phải là <= sqrt(n)</li>
+                      </ul> 
+                       </p>
+                  </li>
+                  <li>
+                    <h4>Output:</h4>
+                    <p>Kết quả tìm ra số nguyên tố trong khoảng n</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab__input ">
+                <div class="row input__group ">
+                   <input class="col input prime" type="number" placeholder="Nhập n" min="1">  
+                </div>
+                <div class="result">
+                  <button class="result__button" onclick="ResultPrime()">Tìm số nguyên tố</button>
+                </div>
+              </div>
+              <div class="tab__result">
+                <label>Kết quả là:</label>
+                <div class="result__text" id="ResultPrime"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script  src="./bai1.js"></script>
+<script  src="./bai2.js"></script>
+<script  src="./bai3.js"></script>
+<script  src="./bai4.js"></script>
+<script  src="./bai5.js"></script> 
+<script  src="./bai6.js"></script> 
+<script  src="./bai7.js"></script> 
+<script src="./resetTextarea.js"></script>
+</body>
+</html>
